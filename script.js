@@ -1,6 +1,6 @@
 
 let imagemAtual = 1
-const imagemFinal = 80;
+const imagemFinal = 5;
 
 
 function proxImagem( img ){
