@@ -25,6 +25,16 @@ window.onscroll = function(){
     let altura = document.body.scrollHeight;
     let scrollPoint = window.scrollY + window.innerHeight;
     if(scrollPoint >= altura){
-        proxImagem( item++ %max );
+        proxImagem( imagemAtual++ %max );
     }
+}
+
+window.onload = function(){
+    for(; imagemAtual <5; imagemAtual++){
+        proxImagem(imagemAtual);
+    }
+
+    setInterval(function(){
+        proxImagem( imagemAtual++ % max);
+    }, 2000);
 }
