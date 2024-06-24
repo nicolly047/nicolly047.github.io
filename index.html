@@ -1,13 +1,187 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FETCH BLOB</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Reset CSS -->
+<link rel="stylesheet" href="css/reset.css">
+
+<!-- Estilos da Barra de Progresso -->
+<link rel="stylesheet" href="css/barra-de-progresso.css">
+
+<!-- Estilos Personalizados -->
+<link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-    <div id="placeholder"></div>
+<header>
+  <section class="dados-pessoais-all">
+    <!-- Módulo 01: Foto de perfil e informações pessoais -->
+    <div class="coluna dados-pessoais">
+        <h1 class="meu-nome">Nicolly L. de Oliveira</h1>
+        <h3 class="tecnologia">3° INFO2 - 9 </h3>
+        <!-- Redes sociais -->
+        <div class="redes-sociais">
+          <!-- Módulo 01: WhatsApp e GitHub -->
+          <div class="coluna">
+        
+            <p class="link">
+              <a href="https://github.com/nicolly047/nicolly047.github.io" target="_blank"><i class="fa-brands fa-github"></i> nicolly047</a>
+            </p>
+          </div>
+          <!-- Módulo 02: E-mail e LinkedIn  ARRUMAR-->
+          <div class="coluna">
+            <p class="link">
+              <a href="mailto:infonicolly2022.02@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> infonicolly2022.02@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+</header>
+
+<main>
+  <section class="fundo-img">
+    <!-- Módulo 02: Sobre mim e texto descritivo -->
+
+    <div class="sobre-mim">
+        <h2>Sobre mim</h2>
+        <div class="texto">
+          <p>Olá meu nome é Nicolly, tenho 17 anos, e estou formado em Informática pelo CEDUP - JOINVILLE. Desde fevereiro de 2022.</p>
+        </div>
+      </div>
+  </section>
+  
+  <section class="section-padrao"
+    <div class="habilidades">
+      <h2>Tecnologias que uso no momento</h2>
+      <div class="skill-bars">
+  
+        <div class="bar">
+        <div class="info">
+            <span>HTML</span>
+        </div>
+        <div class="progress-line html">
+            <span></span>
+        </div>
+        </div>
+        <div class="bar">
+        <div class="info">
+            <span>CSS</span>
+        </div>
+        <div class="progress-line css">
+            <span></span>
+        </div>
+        </div>
+        <div class="bar">
+        <div class="info">
+            <span>JavaScript</span>
+        </div>
+        <div class="progress-line js">
+            <span></span>
+        </div>
+        </div>
+        <div class="bar">
+        <div class="info">
+            <span>PHP</span>
+        </div>
+        <div class="progress-line php">
+            <span></span>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>   
+
+  <section class="fundo-img">
+    <div class="potfolio">
+
+      <h2>Meus principais projetos</h2>
+      <div class="coluna-3">
+        <!--Módulo 1-->
+        <div class="modulo-potfolio">
+          <img src="lua.jpg" alt="">
+          <h3>Animação da "Lua"</h3>
+          <div class="botoes">
+            <a href="file:///U:/L.A/portfolio/Anima%C3%A7%C3%A3o%20Lua/anima_lua.html" target="_blank">Ver projeto</a>
+          </div>
+        </div>
+      
+        <div class="modulo-potfolio">
+          <img src="cep.png" alt="">
+          <h3>Site para Buscar endereço</h3>
+          <div class="botoes">
+            <a href="file:///U:/L.A/ibge/index.html" target="_blank">Ver projeto</a>
+          </div>
+        </div>
+      </div>
+      <div class="coluna-3">
+        <!--Módulo 1-->
+        <div class="modulo-potfolio">
+          <img src="sonic.webp" alt="">
+          <h3>A jornada do "Sonic"</h3>
+          <div class="botoes">
+            <a href="file:///U:/L.A/portfolio/jornada%20do%20sonic/index.html" target="_blank">Ver projeto</a>
+      
+          </div>
+        </div>
+        <!--Módulo 2-->
+        <div class="modulo-potfolio">
+          <img src="editaa.avif" alt="">
+          <h3>Projeto que edita e remove 'nome e genêro" </h3>
+          <div class="botoes">
+            <a href="file:///U:/L.A/portfolio/nomeGenero/index.html" target="_blank">Ver projeto</a>
+        
+          </div>
+        </div>
+      </div>
+      <div class="coluna-3">
+        <!--Módulo 1-->
+        <div class="modulo-potfolio">
+          <img src="MQTT.webp" alt="">
+          <h3>MQTT</h3>
+    
+          <div class="botoes">
+            <a href="file:///U:/L.A/portfolio/mqtt.html" target="_blank">Ver Projeto</a>
+            <a href="https://github.com/anthonyKld/robotron-2000" target="_blank">Código</a>
+          </div>
+        </div>
+        <!--Módulo 2-->
+        <div class="modulo-potfolio">
+          <img src="logo.png" alt="">
+          <h3>Site "New York Times</h3>
+          <div class="botoes">
+            <a href="file:///U:/eduardo/index.html" target="_blank">Ver Projeto</a>
+          
+          </div>
+        </div>
+      </div>
+    
+      <div class="botao_link">
+        <a href="https://github.com/nicolly047/nicolly047.github.io" target="_blank">Ir para repositorio
+    
+        <a href="file:///U:/portifolioo/creditos.html" target="_blank">Ver créditos
+  
+      </a>
+      </a>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- <div class="botao_link">
+    <a href="https://github.com/nicolly047/nicolly047.github.io" target="_blank">
+      <button>Ir para repositorio</button>
+
+      <a href="file:///U:/portifolioo/creditos.html" target="_blank">
+        <button>Ver créditos</button>
+    </a>
+    </div> -->
+  </section>
+</main>
 </body>
-</html>
+</html>       

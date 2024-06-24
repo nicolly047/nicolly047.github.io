@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap')
+
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+ 
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+
+:root {
+    --roxo: #2525FF;
+    --preto: #000000;
+    --sinza: #6B6B6B;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--branco);
+    background-color: var(--preto);
+}
+
+::selection {
+    color: var(--branco);
+    background: #3a3aff;
+}
+
+/*-------------FUNDO-------------*/
+.fundo-preto {
+    width: 100%;
+    margin: auto;
+}
+
+/*----------------------------------------*/
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--branco);
+    text-shadow: rgb(107, 1, 230) 0.1em 0.1em 0.2em
+}
+
+.tecnologia, h2 {
+    font-size: 30px;
+    margin: 0 0 50px 0;
+    font-weight: 550;
+    border-radius: 140px;
+    box-shadow: 3px 3px 8px rgba(228, 223, 223, 0.966);  
+}
+
+
+h3 {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+p {
+    line-height: 1.8em;
+    margin: 0 0 20px 0;
+}
+
+.dados-pessoais-all {
+    max-width: 100%;
+    margin: auto;
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: var(--preto);
+    position: sticky;
+}
+
+
+.dados-pessoais {
+    height: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10em;
+}
+
+.tecnologia {
+    background-color: var(--roxo);
+    color: var(--branco);
+    border-radius: 10px 0 0 10px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.redes-sociais {
+    width: 500px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.redes-sociais p {
+    margin-top: 15px;
+}
+
+.redes-sociais .link a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.redes-sociais .link a:hover {
+    color: var(--roxo);
+}
+
+/*----------------------SOBRE MIM----------------------*/
+.sobre-mim {
+    width: 800px;
+    margin: auto;
+    padding: 50px 0;
+    backdrop-filter:blur(50px);
+    height:100px;
+}
+
+
+.habilidades {
+    width: 800px;
+    margin: auto;
+    padding: 50px 0;
+    color: var(--branco);
+}
+
+.texto-habilidade {
+    margin: 40px 0 10px 0;
+}
+
+.barra {
+    line-height: 1.8;
+}
+
+/*---------------PORTFOLIO---------------*/
+.potfolio {
+    width: 800px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.potfolio .coluna-3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.potfolio p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.potfolio a {
+    padding: 10px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--preto);
+    border: 2px solid var(--branco);
+}
+
+.potfolio a:hover {
+    background-color: var(--roxo);
+    color: var(--branco);
+}
+
+.modulo-potfolio {
+    text-align: center;
+    background-color: #6b6b6b2d;
+    padding: 5px 5px 20px 5px;
+    border-radius: 5px;
+    margin: 0 5px 20px 5px;
+}
+
+.modulo-potfolio img {
+    width: 100%;
+    height:80%;
+    border-radius: 5px;
+}
+
+.modulo-potfolio .botoes {
+    padding: 10px 0;
+}
+
+.modulo-potfolio a {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--preto);
+    border: none;
+}
+
+.modulo-potfolio a:hover {
+    background-color: var(--roxo);
+    color: var(--branco);
+}
+
+.botao_link{
+background: #1C1C1C; 
+border-radius: 36px; 
+padding: 15px; 
+cursor: pointer; 
+color: #fff; 
+border: none; 
+width: 95%;
+}
+
+
+@media (max-width: 1100px) {
+    .redes-sociais {
+        width: 100%;
+        grid-template-columns: 35% 65%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .dados-pessoais-all {
+        max-width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+        padding: 100px 0;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .dados-pessoais {
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+
+    .redes-sociais {
+        width: 100%;
+        grid-template-columns: 100%;
+    }
+
+    .redes-sociais p {
+        margin-top: 0;
+    }
+
+    /*----------------------SOBRE MIM----------------------*/
+    .sobre-mim {
+        width: 90%;
+    }
+
+    /*---------------PORTFOLIO---------------*/
+    .potfolio {
+        width: 90%;
+    }
+
+
+}
+
+@media(max-width: 550px) {
+    .dados-pessoais-all {
+        margin-bottom: 100px;
+    }
+
+    .potfolio .coluna-3 {
+        grid-template-columns: 100%;
+    }
+}
