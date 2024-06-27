@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo LocalStorage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+<form action="#" id="formcad">
+    <label for="nome">Nome completo</label>
+    <input type="text" name="nome" id="nome">
+    <label>Gênero</label>
+    <label for="masc"> Masculino
+        <input type="radio" name="gen" id="masc" value="masc">
+    </label>
+    <label for="fem"> Feminino
+        <input type="radio" name="gen" id="fem" value="fem">
+    </label>
+    <label for="out"> Outro
+        <input type="radio" name="gen" id="out" value="out">
+    </label>
+    <input type="reset"  value="Limpar">
+    <input type="button" value="Cadastrar novo" id="cadnovo">
+    <input type="button" value="Salvar alterações" id="atualiza" style="display:none">
+</form>
+
+<table id="tabela_cadastros">
+    <!-- conteúdo será inserido pelo JS -->
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos - The Moment</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo da The Moment">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="background-image"></div>
+    <form id="register-form" action="#">
+        <h2>Registre-se para o Evento</h2>
+        <div class="registration-info">
+            <label for="event-type">Tipo de Evento</label>
+            <select name="event-type" id="event-type" required>
+                <option value="">Selecione...</option>
+                <option value="aniversario">Aniversário</option>
+                <option value="casamento">Casamento</option>
+                <option value="formatura">Formatura</option>
+                <option value="corporativo">Evento Corporativo</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" minlength="11" maxlength="11" required>
+
+            <div>
+                <label for="age">Idade</label>
+                <input type="date" name="age" id="age" required>
+                <div id="age-display"></div>
+            </div>
+
+            <label for="date">Data do Evento</label>
+            <input type="date" name="date" id="date" required>
+            <div id="days-display"></div>
+
+            <label for="time">Horário</label>
+            <input type="time" name="time" id="time" required>
+
+            <label for="guests">Número de Convidados</label>
+            <input type="number" name="guests" id="guests" min="1" required>
+
+            <fieldset>
+                <legend>Gênero do Anfitrião</legend>
+                <label for="male">Masculino</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">Feminino</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </fieldset>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$">
+
+            <label for="confirm-password">Confirmar Senha</label>
+            <input type="password" name="confirm-password" id="confirm-password" required>
+
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms">Aceito os termos e condições</label>
+        </div>
+        <input type="submit" value="Enviar" id="submit-button">
+    </form>
+</body>
+</html>

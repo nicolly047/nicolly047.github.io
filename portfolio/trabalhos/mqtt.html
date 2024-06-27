@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+    .resposta{
+        width:100%;
+        height: 500px;
+        background-color:lightgrey;
+        overflow-y: scroll;
+    }
+
+    .rodape{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        color:white;
+        font-size: 20px;
+     
+        background-color: rgb(26, 15, 36);
+        align-items: center;
+        position: fixed;
+    }
+
+    button{
+        width: 75px;
+        height: 30px;
+    }
+</style>
+</head>
+
+<body>
+
+  
+
+    <div class="resposta" id="resposta"></div>
+
+    <div class="rodape">
+        Apelido:    <input type="text" id="apelido" size="5">   &nbsp; &nbsp; &nbsp; 
+        Mensagem:   <input type="text" id="texto" size="50">    &nbsp; &nbsp; &nbsp; 
+    
+    <button onclick="Enviar();"> enviar </button>
+    <button onclick="Enviarbeijo();"> beijinho </button>
+    <button onclick="Enviartchau();"> tchauzinho </button>
+    <button onclick="Enviarola();"> olá </button>
+    <button onclick="Enviartriste();"> tristinho </button>
+    <button onclick="Enviarbravo();"> bravinho </button>
+
+</div>
+
+</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js"></script>
+
+    <script>
+
+        topico = "nicolly/herika"
+        client = new Paho.MQTT.Client("broker.hivemq.com", Number(8000), "")
+
+        client.connect({onSuccess:Conectou})
+
+        function Conectou(){
+
+            client.subscribe(topico)
+            message = new Paho.MQTT.Message('')
+            message.destinationName = topico
+
+        }
+
+        client.onConectionLost = Conexao_Perdida
+        client.onMessageArrived = Mensagem_Chegou
+
+        function Conexao_Perdida(responseObject){
+
+            if(responseObject.errorCode !== 0){
+
+                resposta.innerHTML += "Desconectado: " + responseObject.errorMessage
+
+            }
+
+        }
+
+        function Mensagem_Chegou(message){
+        
+        resposta.innerHTML += "<br>"
+
+        mensagem = message.payloadString
+
+        mensagem = mensagem.replace(">", "width='100px'>")
+        
+        resposta.innerHTML += mensagem
+        }
+        
+        function Enviar(){
+
+            valor = apelido.value + ": " + texto.value
+            message = new Paho.MQTT.Message(valor)
+            message.destinationName = topico
+            client.send(message)
+
+        }
+
+        function Enviarbeijo(){
+
+            valor = apelido.value + ": " + "<img src='https://i.pinimg.com/originals/6f/85/6a/6f856a56f177ba8222b16ca79ead125e.gif'>"
+            message = new Paho.MQTT.Message(valor)
+            message.destinationName = topico
+            client.send(message)
+
+}
+
+function Enviartchau(){
+
+valor = apelido.value + ": " + "<img src='https://img.freepik.com/vetores-premium/tchau-tchau-personagem-de-desenho-animado-emoji-bonito-no-fundo-amarelo_106878-540.jpg'>"
+message = new Paho.MQTT.Message(valor)
+message.destinationName = topico
+client.send(message)
+
+}
+
+function Enviarola(){
+
+valor = apelido.value + ": " + "<img src='https://lh6.ggpht.com/_rc-59Co5heY/Sg7NAk39ssI/AAAAAAAAC0A/9NpQjbeCeSg/s400/fddf%20%283%29.png'>"
+message = new Paho.MQTT.Message(valor)
+message.destinationName = topico
+client.send(message)
+
+}
+
+function Enviartriste(){
+
+valor = apelido.value + ": " + "<img src='https://cdn.dicionariopopular.com/imagens/carinha-implorando-significado-do-emoji-og.jpg?class=ogImageRectangle'>"
+message = new Paho.MQTT.Message(valor)
+message.destinationName = topico
+client.send(message)
+
+}
+
+
+function Enviarbravo(){
+
+valor = apelido.value + ": " + "<img src='https://media.tenor.com/oHoGEQX2KkUAAAAj/no.gif'>"
+message = new Paho.MQTT.Message(valor)
+message.destinationName = topico
+client.send(message)
+
+}
+
+
+    </script>
+
+</html>
